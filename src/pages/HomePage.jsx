@@ -30,7 +30,7 @@ const HomePage = () => {
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              to="/about"
+              to=""
               className="group relative overflow-hidden rounded-full bg-white px-8 py-3.5 text-lg font-bold text-black transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] active:scale-95"
             >
               <span className="relative z-10">Register Now</span>
@@ -38,7 +38,7 @@ const HomePage = () => {
             </Link>
 
             <Link
-              to=""
+              to="/about"
               className="rounded-full border border-white/30 px-8 py-3.5 text-lg font-medium text-white backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white"
             >
               Learn More
