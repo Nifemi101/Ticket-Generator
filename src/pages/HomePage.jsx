@@ -30,7 +30,7 @@ const HomePage = () => {
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              to=""
+              to="/register"
               className="group relative overflow-hidden rounded-full bg-white px-8 py-3.5 text-lg font-bold text-black transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] active:scale-95"
             >
               <span className="relative z-10">Register Now</span>

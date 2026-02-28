@@ -22,7 +22,10 @@ const Header = () => {
               <NavLink to="/about" className="text-white hover:text-gray-300">
                 About
               </NavLink>
-              <NavLink to="" className="text-white hover:text-gray-300">
+              <NavLink
+                to="/register"
+                className="text-white hover:text-gray-300"
+              >
                 Register
               </NavLink>
             </div>
