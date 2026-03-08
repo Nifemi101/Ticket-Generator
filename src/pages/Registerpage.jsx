@@ -1,4 +1,5 @@
 import DragNDrop from "../components/DragNDrop";
+import FormInput from "../components/formInput";
 
 const Registerpage = () => {
   return (
@@ -7,12 +8,8 @@ const Registerpage = () => {
         Your Journey to Genrative Con{" "}
         <span className="text-purple-400">2026</span> starts here!
       </h1>
-
       <DragNDrop />
-
-      <p className="mt-8 text-gray-500 text-sm">
-        Fill in the rest of your details below to complete registration.
-      </p>
+      <FormInput />
     </div>
   );
 };
