@@ -62,7 +62,7 @@ const DragNDrop = ({ onUpload }) => {
   const inputRef = useRef(null);
 
   const handleFile = useCallback((incoming) => {
-    setError(""); // Clear previous errors
+    setError("");
 
     if (!incoming) return;
 
