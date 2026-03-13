@@ -106,7 +106,7 @@ const TicketPage = ({ ticketData }) => {
                 <img
                   src={avatarUrl}
                   alt={`${fullName}'s avatar`}
-                  className="w-16 h-16"
+                  className="w-16 h-16 rounded-tl-2xl rounded-bl-2xl rounded-tr-2xl rounded-br-2xl"
                 />
               ) : (
                 <div className="w-16 h-16 flex items-center justify-center">
