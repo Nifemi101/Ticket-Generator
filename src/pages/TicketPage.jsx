@@ -43,19 +43,15 @@ const TicketPage = ({ ticketData }) => {
     );
   }
 
-  // Destructure the user data that was collected from the FormInput and DragNDrop
   const { fullName, email, gitHub } = ticketData;
 
-  // Generate a mock ticket number for premium ticket aesthetics
   const ticketNumber = Math.floor(10000 + Math.random() * 90000);
 
   return (
     <div className="min-h-screen bg-[#050a14] text-white font-sans flex flex-col items-center p-6 pt-12 relative overflow-hidden">
-      {/* Abstract background glows for a dynamic, premium aesthetic */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none transform -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none transform translate-x-1/2 translate-y-1/2" />
 
-      {/* Header Logo (matching the design reference format) */}
       <div className="flex items-center gap-3 z-10 mb-10 mt-6 md:mt-12">
         <img src={logo} alt="Generative Con" className="h-10 w-auto" />
         <span className="text-2xl font-bold tracking-wider">
@@ -84,9 +80,7 @@ const TicketPage = ({ ticketData }) => {
         </p>
       </div>
 
-      {/* The Glassmorphism Ticket Card centered on page */}
       <div className="relative w-full max-w-[700px] z-10 mx-auto filter drop-shadow-[0_25px_50px_rgba(167,139,250,0.15)] transition-transform hover:scale-[1.02] duration-500 cursor-default">
-        {/* Real-ticket shape container (Flexbox with 3 parts: left card, dashed separator, right stub) */}
         <div className="relative flex w-full">
           <div className="flex-1 bg-linear-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 border-r-0 rounded-l-3xl p-6 md:p-8 pt-8 flex flex-col justify-between relative overflow-hidden min-h-[240px]">
             {/* Inner subtle glow for more glass realism */}
