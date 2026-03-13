@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { useNavigate } from "react-router-dom";
 
 const FormInput = ({ generateTicket }) => {
@@ -25,7 +24,6 @@ const FormInput = ({ generateTicket }) => {
 
     setEmailError("");
     generateTicket({ fullName, email, gitHub });
-
     navigate("/ticket");
   };
 

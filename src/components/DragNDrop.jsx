@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 
 const ACCEPTED_TYPES = ["image/jpeg", "image/png"];
 const MAX_SIZE_BYTES = 5 * 1024 * 1024; // 5MB
@@ -54,7 +54,7 @@ const styles = {
   },
 };
 
-const DragNDrop = () => {
+const DragNDrop = ({ onUpload }) => {
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -62,15 +62,21 @@ const DragNDrop = () => {
   const inputRef = useRef(null);
 
   const handleFile = useCallback((incoming) => {
-    setError("");
+    setError(""); // Clear previous errors
+
     if (!incoming) return;
 
     if (!ACCEPTED_TYPES.includes(incoming.type)) {
       setError("Only JPG and PNG files are accepted.");
+      setPreview(null);
+      setFile(null);
       return;
     }
+
     if (incoming.size > MAX_SIZE_BYTES) {
-      setError("File exceeds 5MB.");
+      setError("File is too large. Please upload an image under 5MB.");
+      setPreview(null);
+      setFile(null);
       return;
     }
 
@@ -81,6 +87,12 @@ const DragNDrop = () => {
     };
     reader.readAsDataURL(incoming);
   }, []);
+
+  useEffect(() => {
+    if (onUpload) {
+      onUpload(file);
+    }
+  }, [file, onUpload]);
 
   const handleDrop = (e) => {
     e.preventDefault();
