@@ -100,7 +100,7 @@ const TicketPage = ({ ticketData }) => {
 
               <div className="hidden sm:flex flex-col items-end">
                 <span className="px-3 py-1 border border-purple-500/40 bg-purple-500/10 rounded-full text-purple-300 text-xs font-bold tracking-widest uppercase">
-                  VIP Access
+                  VIP
                 </span>
               </div>
             </div>
