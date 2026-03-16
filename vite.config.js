@@ -9,6 +9,8 @@ export default defineConfig({
     port: 3000,
   },
   preview: {
-    allowedHosts: ["generative-con.pxxl.click"],
+    host: true,
+    port: 3000,
+    allowedHosts: ["generative-con.pxxl.click", ".pxxl.click"],
   },
 });
