@@ -12,7 +12,7 @@ const Registerpage = ({ generateTicket }) => {
   return (
     <div className="min-h-screen bg-[#050a14] text-white font-sans pt-12 flex flex-col items-center p-4">
       <h1 className="text-center text-2xl md:text-4xl font-bold mb-8">
-        Your Journey to Genrative Con{" "}
+        Your Journey to Generative Con{" "}
         <span className="text-purple-400">2026</span> starts here!
       </h1>
       <DragNDrop onUpload={(file) => setAvatar(file)} />
