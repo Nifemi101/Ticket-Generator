@@ -82,7 +82,7 @@ const FormInput = ({ generateTicket }) => {
 
       <button
         type="submit"
-        className="mt-4 ml-12 mr-12 p-4 bg-purple-400 hover:bg-purple-600 font-bold rounded-lg transition-colors text-white text-3xl text-center"
+        className="mt-4 ml-9 mr-9 p-4 bg-purple-400 hover:bg-purple-600 font-bold rounded-lg transition-colors text-white text-2xl text-center"
       >
         Generate Ticket
       </button>
